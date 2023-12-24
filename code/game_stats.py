@@ -66,5 +66,3 @@ class GameStats:
         df = pd.concat([df,pd.DataFrame([new_row])],ignore_index = True)
         df.to_csv("./data/history_score.csv",index = False)
         print(f"已向文件中追加一行数据：[{current_time}, {self.score}]")
-        
-

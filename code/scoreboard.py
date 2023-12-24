@@ -109,12 +109,6 @@ class Scoreboard:
         self.high_score_rect_deadpage.centery = self.screen.get_rect().centery - 85
 
 
-
-
-
-
-
-            
     def show_score_on_deadpage(self):
         """ 在结算界面绘制分数 """
         self.screen.blit(self.score_image_deadpage,self.score_rect_deadpage)
@@ -148,8 +142,3 @@ class Scoreboard:
         image = pygame.image.fromstring(image.tobytes(), image.size, image.mode)
         pygame_surface = pygame.transform.scale(image,(300,200))  # 调整大小（可选）
         self.history_score = pygame_surface
-
-
-
-        
-        

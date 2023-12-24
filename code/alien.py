@@ -52,4 +52,3 @@ class Alien(Sprite):
             if self.rect.top < self.screen.get_rect().top + 50:
                 self.y += (self.alien_yspeed)
                 self.rect.y = self.y
-

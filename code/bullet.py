@@ -63,7 +63,6 @@ class Bullet(Sprite):
             self.x += ((delta_x>0)-(delta_x<0)) * self.bullet_xspeed
             self.rect.x = self.x
 
-    
     def draw_bullet(self):
         """ 在屏幕上绘制子弹 """
         self.screen.blit(self.image,self.rect)

@@ -42,8 +42,3 @@ class Settings:
         self.superbullet_DURATION = 6000  # 常数DURATION：增加威力buff有效时间6000毫秒（不包括暂停时间）
         self.doublebullet_DURATION = 6000  #  双发buff持续6000毫秒
         self.protectship_DURATION = 2000  #  保护buff持续2000毫秒
-    
-
-
-
-    
