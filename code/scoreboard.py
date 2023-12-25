@@ -126,7 +126,7 @@ class Scoreboard:
         draw = ImageDraw.Draw(image)
         font_size = 20
         font = ImageFont.truetype("./素材/font/2.ttf", font_size)
-        font_color = (72,209,204,255)  # 完全不透明
+        font_color = (255, 127, 80,255)  # 完全不透明
         # 最高分
         draw.text((10, 0), f"最高分\t\t{df.columns[0]:^} \t\t\t\t {df.columns[1]:>7} ",fill=font_color, font=font)
         draw.text((10, 25), f"{df.loc[df['score'].idxmax()]['time']:^} {df.loc[df['score'].idxmax()]['score']:>7} ",fill=font_color, font=font)

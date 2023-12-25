@@ -24,9 +24,7 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode((self.settings.screen_width,self.settings.screen_height))  # 窗口大小
         pygame.display.set_caption('外星人入侵')  # 窗口标题
         self.src = Source(self.screen)  # 导入游戏所有需要的资源（图片、音频）
-        #icon =  # 窗口图标
-        
-        pygame.display.set_icon(self.src.images["icon"] .convert_alpha())
+        pygame.display.set_icon(self.src.images["icon"])  # 窗口图标
         self.sb = Scoreboard(self,self.src)  # 计分板
         self.ship = Ship(self,self.src) # 创建飞船
         self.clock = pygame.time.Clock()  # 帧率设置
@@ -109,7 +107,7 @@ class AlienInvasion:
         self.warnings = pygame.sprite.Group()
         gf.create_fleet(screen=self.screen,settings=self.settings,stats=self.stats,src = self.src,aliens = self.aliens,warnings = self.warnings)
         # 窗口图标
-        pygame.display.set_icon(self.src.images["icon"] .convert_alpha())
+        pygame.display.set_icon(self.src.images["icon"])  # 窗口图标
         
         
     def run_game(self):

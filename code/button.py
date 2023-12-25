@@ -3,6 +3,7 @@ import game_functions as gf
 from pygame.sprite import Sprite
 import os
 from ship import Ship
+import random
 
 class Button(Sprite):
     def __init__(self,ai_game,src,center:tuple,button_type:str) :
@@ -41,6 +42,9 @@ class Button(Sprite):
             self.button_clicknum += 1
             if self.button_type == "play":  # play按钮
                 ai_game.ship = Ship(ai_game,self.src,ai_game.ship_selected.button_type)
+                ai_game.background_image =ai_game.src.images["bgimages"][random.choice([2,1])]
+                pygame.mixer.music.load(ai_game.src.sounds['BGMs'][random.choice([0,1])])
+                pygame.mixer.music.set_volume(0.3)
                 pygame.mixer.music.play(-1)
                 # 重置游戏统计信息
                 ai_game.stats.reset_stats()
@@ -84,15 +88,7 @@ class Button(Sprite):
                     self.stats.music_on = 1
                     pygame.mixer.music.set_volume(0.4)
                 
-                
-
     def update_button(self):
         if  self.button_type == "pause":  # 暂停按钮
             self.image =  self.images[self.stats.is_paused]
             self.screen.blit(self.image,self.rect)
-                
-
-
-
-
-        

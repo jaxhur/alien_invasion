@@ -25,14 +25,14 @@ class Settings:
 
         # 外星人设置
         self.alien_max = 3  # 最多能显示的外星人数
-        self.alien_hp = {"low":1,"middle":4,"high":8,"boss":30}
+        self.alien_hp = {"low":2,"middle":5,"high":10,"boss":150}
         self.alien_point = {"low":10,"middle":30,"high":50,"boss":200}
         self.alien_xspeed = {"low":1.5,"middle":1,"high":0.5,"boss":0}
         self.alien_yspeed = {"low":0.8,"middle":0.5,"high":0.3,"boss":0.5}
         self.alien_xrange = {"low":self.screen_width,"middle":self.screen_width/5*3,
                              "high":self.screen_width/5*2,"boss":0}
         # BOSS设置
-        self.BOSS_APPEAR_TIME = 10000   # BOSS出现时间
+        self.BOSS_APPEAR_TIME = 15000   # BOSS出现时间
         self.BOSS_SHOOT_INTERVAL = 3000  # BOSS发射子弹间隔
         # buff设置
         self.buff_types = ["addhp","superbullet","doublebullet",'protect'] # 加血，威力，子弹数

@@ -165,25 +165,25 @@ class Source:
         clickbutton_sound.set_volume(0.1)
         ## 射击音效
         shootsound = pygame.mixer.Sound('./素材/sound/shoot.wav')  
-        shootsound.set_volume(0.2)
+        shootsound.set_volume(0.05)
         ## 射中外星人音效
         bullet_alien_collisionsound = pygame.mixer.Sound('./素材/sound/bullet_alien_collision.wav')  
-        bullet_alien_collisionsound.set_volume(0.5)
+        bullet_alien_collisionsound.set_volume(0.2)
         ## 获得buff音效
         getbuff_addhp_sound = pygame.mixer.Sound('./素材/sound/getbuff_addhp.wav')  
         getbuff_doublebullet_sound = pygame.mixer.Sound('./素材/sound/getbuff_doublebullet.wav')  
         getbuff_superbullet_sound = pygame.mixer.Sound('./素材/sound/getbuff_superbullet.wav')
         getbuff_protect_sound = pygame.mixer.Sound('./素材/sound/getbuff_addhp.wav')
         
-        getbuff_addhp_sound.set_volume(0.3)
-        getbuff_doublebullet_sound.set_volume(0.6)
-        getbuff_protect_sound.set_volume(0.3)
-        getbuff_superbullet_sound.set_volume(0.3)
+        getbuff_addhp_sound.set_volume(0.1)
+        getbuff_doublebullet_sound.set_volume(0.4)
+        getbuff_protect_sound.set_volume(0.1)
+        getbuff_superbullet_sound.set_volume(0.1)
         # boss出现音效
         boss_up = pygame.mixer.Sound('./素材/sound/boss_up.MP3')  
         # 失败
         fail = pygame.mixer.Sound('./素材/sound/fail.mp3')
-        fail.set_volume(0.05)
+        fail.set_volume(0.2)
         self.sounds.update({"BGMs":bgms,
                            "sounds":{
                                "clickbutton":clickbutton_sound,

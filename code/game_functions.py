@@ -224,6 +224,8 @@ def ship_hit(screen,stats,settings,sb,src,ship,aliens,alien_hitted,explosions):
         if alien.hp <=0:
             stats.score += alien.point
             levelup(screen,settings,stats,sb,src,ship)
+            sb.prep_img(text = stats.score,loc=(screen.get_rect().left,10),fontsize = 30,type = 'score')
+            sb.prep_img(text = stats.ship_level,loc=(screen.get_rect().left ,40),fontsize = 30,type = 'level' )
             aliens.remove(alien)
             if alien.alien_type == "boss": 
                 stats.is_boss = False
@@ -323,4 +325,3 @@ def protect_ship(settings,stats,bullet_splash_sound,):
     stats.is_protected = True
     stats.last_protectship_time = pygame.time.get_ticks()
     stats.protectship_remaintime = settings.protectship_DURATION
-
